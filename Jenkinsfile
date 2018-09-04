@@ -3,7 +3,7 @@ pipeline {
   stages {
 		stage('Unit Tests') {
       agent {
-        label: 'apache'
+        label 'apache'
       }
 			steps {
 				sh 'ant -f test.xml -v'
@@ -12,7 +12,7 @@ pipeline {
 		}
     stage('build') {
       agent {
-        label: 'apache'
+        label 'apache'
       }
       steps {
         sh 'ant -f build.xml -v'
