@@ -36,5 +36,13 @@ pipeline {
       }
     }
   }
+  post {
+    agent {
+      label 'apache'
+    }
+    success {
+      archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
+    }
+  }
 
 }
