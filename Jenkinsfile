@@ -38,6 +38,8 @@ pipeline {
       steps {
         sh "wget http://wangshiyuan881.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
         sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
+        sh "whoami"
+        sh "hostname"
       }
     }
     stage('Test on Debian') {
