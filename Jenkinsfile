@@ -77,7 +77,6 @@ pipeline {
         echo "Stashing Any Local Changes"
         sh "git stash"
         echo "Checking Out Development Branch"
-        sh "git branch -D development"
         sh "git fetch origin development && git checkout development"
         echo "Checking out Master Branch"
         sh "git checkout master"
