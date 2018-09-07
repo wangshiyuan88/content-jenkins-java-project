@@ -82,7 +82,7 @@ pipeline {
         echo "Stashing Any Local Changes"
         sh "git stash"
         echo "Checking Out Development Branch"
-        sh "git fetch origin development && git checkout development"
+        sh "git pull origin development"
         echo "Checking out Master Branch"
         sh "git checkout master"
         echo "Merging Development into Master Branch"
